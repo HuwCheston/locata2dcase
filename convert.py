@@ -274,6 +274,9 @@ def Locata2DecaseFormat(tasks, data_dir, coord_system="cartesian"):
         for truth in truth_list:
             split = "dev" if "dev" in data_dir else "eval"
             out_filename = f'./output/{split}/task{task_id}_recording{truth.recording_id}.csv'
+            # Silently skip existing files
+            if os.path.isfile(out_filename):
+                continue
             with open(out_filename, mode='w', newline='') as csv_file:
                 csv_writer = csv.writer(csv_file)
                 print("Processing {}".format(out_filename))
