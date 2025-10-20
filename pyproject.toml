@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "locata2dcase"
+version = "0.1.0"
+authors = ["Huw Cheston <h.cheston@qmul.ac.uk>", "Iran Roman <i.roman@qmul.ac.uk>"]
+license = "CC-BY-4.0"
+keywords = ["audio", "sound", "soundscape", "environmental", "ambisonics", "microphone array", "sound event detection", "localization"]
+classifiers = [
+    "Programming Language :: Python",
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+    "Topic :: Multimedia :: Sound/Audio :: Sound Synthesis"
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pandas = "*"
+soundfile = "*"
+numpy = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
